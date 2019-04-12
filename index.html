@@ -11,7 +11,7 @@
 		<input type="text" class="form-control" v-model = "query">
 		<h1 class="mt-2">People of Gaul</h1>
 		<ul class="list-group mt-2">
-			<li v-for = "person in people | orderBy 'age' 1 | filterBy query" class="list-group-item">
+			<li v-for = "person in people | orderBy 'age' 1 | filterBy query in 'name' " class="list-group-item">
 				{{person.name}} ,{{person.age}}
 			</li>
 		</ul>
